@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Itens</title>
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+       
+        .center{
+            align-items: center;
+        }
+
+        .stretch{
+            align-items: stretch;
+        }
+
+        .flexstart{
+            align-items: flex-start;
+        }
+
+        .flexend{
+            align-items: flex-end;
+        }
+
+        .baseline{
+            align-items: baseline;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .central{
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <p>center</p>
+    <section class="flex-container center">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum dolor sit</div>
+    </section>
+
+    <p>stretch</p>
+    <section class="flex-container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="flex-container flexstart">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+    
+    <p>flex-end</p>
+    <section class="flex-container flexend">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+
+    <p>baseline</p>
+    <section class="flex-container baseline">
+        <div class="item"><br>Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+
+    <h1>column</h1>
+    <p>center</p>
+    <section class="flex-container center column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum dolor sit</div>
+    </section>
+
+    <p>stretch</p>
+    <section class="flex-container stretch column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="flex-container flexstart column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+    
+    <p>flex-end</p>
+    <section class="flex-container flexend column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+
+    <p>baseline</p>
+    <section class="flex-container baseline column">
+        <div class="item">Item 1</div>
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">Item 3 Lorem ipsum doloripsum dolor sit</div>
+    </section>
+
+    <p>alinhamento central a tela</p>
+    <section class="flex-container central center">
+        <div class="item">
+                          Lorem ipsum dolor sit amet consectetur,
+                          adipisicing elit. Quasi quisquam quae 
+                          omnis ullam .
+        </div>
+    </section>
+</body>
+
+</html>
