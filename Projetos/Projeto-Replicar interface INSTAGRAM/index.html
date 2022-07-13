@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+</head>
+<body>
+
+    <!-- Criação de DIV para container pai/principal, 
+        que abarcará duas colunas: uma para a imagem dos celulares, 
+        outra para as informações de login, logout, etc.  -->
+    <div class="instagram-wrapper">
+
+        <!-- Div responsável pela imagem de celular -->
+        <div class="instagram-phone">
+            <img src="./img/instagram-celular.png" alt="Celular">
+        </div>
+
+        <!-- Div responsável pelas informações de login -->
+        <div class="instagram-continue">
+            
+            <!-- Criação de um grupo para a estilização dos 3 containeres da coluna de login -->
+            <div class="group">
+
+                <!-- Logo do instagram -->
+                <img src="./img/instagram-logo.png" alt="Instagram Logo">
+
+                <!-- Div para estilização da foto de perfil -->
+                <div class="profile-photo">
+                    <img src="./img/perfil-instagram.jpg" alt="Foto de perfil">
+                </div>
+
+                <!-- Criação de ancoras para login (botão) e logout (link) -->
+                <a href="#" class="instagram-login">Continue como cajuf</a>
+                <a href="#" class="instagram-logout">Remover conta</a>
+            </div>
+            
+            <!-- Tratamento da sessão quando não é o usuário logado -->
+            <div class="group">
+                <p class="not-account">Não é cajuf?</p>
+                <p class="not-account">
+                    <span class="link-blue">Alternar contas</span>
+                    ou 
+                    <span class="link-blue">Inscreva-se</span>
+                </p>
+            </div>
+
+            <!-- Tratamento da sessão para baixar os apps -->
+            <div class="get-the-app">
+                <p>Baixe o aplicativo</p>
+                <div class="download">
+                    <a href="#" class="app-download"></a>
+                    <a href="#" class="app-download"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

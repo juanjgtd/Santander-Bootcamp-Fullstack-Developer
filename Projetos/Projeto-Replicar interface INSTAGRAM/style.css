@@ -1,0 +1,174 @@
+/* Resetar estilos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* Estilização inicial da tela */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilização do container pai/principal */
+.instagram-wrapper {
+    display: flex;
+    align-items: center; /* Alinhamento ao centro no eixo y */
+    justify-content: start; /* Alinhamento da esquerda para direita no eixo x */
+    width: 60%;
+    height: 100vh;
+}
+
+/* Estilização do container da imagem do celular */
+.instagram-phone {
+    display: flex;
+    align-items: center; /* Alinhamento ao centro no eixo y */
+    justify-content: center; /* Alinhamento ao centro no eixo x */
+    width: 50%;
+}
+
+/* Adequação do tamanho da imagem propriamente dita ao seu container */
+.instagram-phone img {
+    width: 50rem;
+}
+
+/* Estilização do container geral responsável pelo lado direito da tela */
+.instagram-continue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Espalha os itens por todo espaço disponível, 
+                                    considerando o espaçamento em branco inicial e final */
+    flex-direction: column; /* Altera a direção dos items de row (padrão) para column, 
+                                para que fique um abaixo do outro */
+    width: 50%;                                
+    min-height: 34rem;
+}
+
+/*  Estilização dos containeres individuais do lado direito da tela, dentro do container geral */
+.group {
+    display: flex;
+    justify-content: space-between; /* Espalha os itens por todo o espaço disponível,
+                                        desconsiderando o espaçamento em branco inicial e final */
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+/* Estilização do primeiro container do grupo (foto de perfil, botão de login, link de logout) */
+.group:nth-child(1) {
+    min-height: 19rem;
+
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 6rem;
+}
+
+.instagram-login {
+    background-color: #0095f6;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+/* Estilização do segundo container dentro do container grupo */
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0095f6;
+}
+
+/* Estilização do terceiro container dentro do grupo (download dos apps) */
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url("./img/apple-button.png");
+}
+
+.app-download:nth-child(2) {
+    background-image: url("./img/googleplay-button.png");
+}
+
+/* Tratamento da responsividade */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }  
+
+    .instagram-continue {
+        width: 100%;
+    }
+
+    .group {
+        border: 1px solid transparent;
+    }
+}
